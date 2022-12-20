@@ -15,8 +15,10 @@ public class MainToko extends Buku {
     // Buat list untuk menyimpan data buku
     ArrayList<Buku> daftarBuku = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
-    for (int i = 0; i < 3; i++) {
+    for (int i = 1; i < 4; i++) {
       Buku buku = new Buku();
+      //Index input data buku
+      System.out.println("----------------------------\n\tData Buku Ke-"+i+"\n----------------------------");
       // Set nilai atribut buku menggunakan setter
       System.out.print("Masukkan judul buku: ");
       buku.setJudul(scan.nextLine());
@@ -27,12 +29,11 @@ public class MainToko extends Buku {
       System.out.print("Masukkan tahun cetak: ");
       buku.setTahunCetak(scan.nextInt());
       scan.nextLine();
-      System.out.print("Masukkan kategori (su = semua umur, r = remaja, d = dewasa, a = anak): ");
+      System.out.print("Masukkan kategori su, d, r, a : ");
       buku.setKategori(scan.nextLine());
-      // Tambahkan instance buku ke list
       daftarBuku.add(buku);
     }
-    // Tampilkan informasi semua buku yang tersimpan dalam list
+    // Tampilkan informasi semua buku yang tersimpan dalam arraylist
     System.out.println("\nDaftar Buku\n+---------------+---------------+---------------+---------------+---------------+");
     System.out.println("| Judul         | Pengarang     | Penerbit      | Tahun Cetak   | Kategori      |");
     System.out.println("+---------------+---------------+---------------+---------------+---------------+");
@@ -40,11 +41,5 @@ public class MainToko extends Buku {
         System.out.println(String.format("| %-13s | %-13s | %-13s | %-13s | %-13s |", buku.getJudul(), buku.getNamaPengarang(), buku.getPenerbit(), buku.getTahunCetak(), buku.getKategori()));
     }
     System.out.println("+---------------+---------------+---------------+---------------+---------------+");
-//      System.out.println("Judul: " + buku.getJudul());
-//      System.out.println("Pengarang: " + buku.getNamaPengarang());
-//      System.out.println("Penerbit: " + buku.getPenerbit());
-//      System.out.println("Tahun Cetak: " + buku.getTahunCetak());
-//      System.out.println("Kategori: " + buku.getKategori());
-//      System.out.println();
     }
   }
