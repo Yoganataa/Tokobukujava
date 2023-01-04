@@ -9,25 +9,19 @@ package Prak7.TugasTokoBukuNata;
  * @author ACER
  */
 import java.util.Scanner;
-
 public class MainBuku extends Buku{
-
   @Override
   public void Uthor() {
         System.out.print("----------------------------------------\nTugas Ini Dikerjakan oleh ");
   }
-
     @Override
     public int getNim() {
         return super.getNim(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
-
     @Override
     public void setNim(int nim) {
         super.setNim(nim); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
-    
-  
   public static void main(String[] args) {
       // Buat list untuk menyimpan data buku
       Scanner scan = new Scanner(System.in);
